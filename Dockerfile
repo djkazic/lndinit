@@ -28,3 +28,7 @@ FROM ${BASE_IMAGE}:${BASE_IMAGE_VERSION} as final
 
 # Copy the binary from the builder image.
 COPY --from=builder /go/bin/lndinit /bin/
+
+# Copy the k8s init script
+COPY example-init-wallet-k8s.sh /init-wallet-k8s.sh
+RUN chmod +x /init-wallet-k8s.sh

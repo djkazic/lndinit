@@ -54,13 +54,13 @@ echo "[STARTUP] Preparing lnd auto unlock file"
 # To make sure the password can be read exactly once (by lnd itself), we create
 # a named pipe. Because we can only write to such a pipe if there's a reader on
 # the other end, we need to run this in a sub process in the background.
-mkfifo "${WALLET_PASSWORD_FILE}"
+touch "${WALLET_PASSWORD_FILE}"
 lndinit -v load-secret \
   --source=k8s \
   --k8s.base64 \
   --k8s.namespace="${WALLET_SECRET_NAMESPACE}" \
   --k8s.secret-name="${WALLET_SECRET_NAME}" \
-  --k8s.secret-key-name=walletpassword > "${WALLET_PASSWORD_FILE}" &
+  --k8s.secret-key-name=walletpassword > "${WALLET_PASSWORD_FILE}"
 
 # In case we have a remote signing setup, we also need to provision the RPC
 # secrets of the remote signer.
@@ -102,9 +102,3 @@ if [[ "${UPLOAD_RPC_SECRETS}" == "1" ]]; then
     "${WALLET_DIR}"/*.macaroon \
     /tmp/accounts.json &
 fi
-
-# And finally start lnd. We need to use "exec" here to make sure all signals are
-# forwarded correctly.
-echo ""
-echo "[STARTUP] Starting lnd with flags: $@"
-exec lnd "$@"
