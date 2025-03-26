@@ -24,7 +24,7 @@ RUN apk add --no-cache --update alpine-sdk \
   &&  make release-install
 
 # Start a new, final image.
-FROM ${BASE_IMAGE}:${BASE_IMAGE_VERSION} as final
+FROM ${BASE_IMAGE}:${BASE_IMAGE_VERSION}@sha256:5dd99fe6dfe4c51d23eaa882c79617d18e3f880958f88ae0013f4f9902917515 as final
 
 # Copy the binary from the builder image.
 COPY --from=builder /go/bin/lndinit /bin/
