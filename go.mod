@@ -202,3 +202,5 @@ require (
 replace google.golang.org/protobuf => github.com/lightninglabs/protobuf-go-hex-display v1.30.0-hex-display
 
 go 1.23.6
+
+replace github.com/lightningnetwork/lnd => github.com/djkazic/lnd v0.13.0-beta.rc5.0.20250326180526-7a8f1ec60dfc
