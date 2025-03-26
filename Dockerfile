@@ -1,8 +1,8 @@
 ARG GO_VERSION=1.23.6
-ARG BASE_IMAGE=lightninglabs/lnd
-ARG BASE_IMAGE_VERSION=v0.19.0-beta.rc1
+ARG BASE_IMAGE=djkazic/lnd
+ARG BASE_IMAGE_VERSION=v0.19.0-rc1.custom
 
-FROM golang:${GO_VERSION}-alpine as builder
+FROM golang:${GO_VERSION}-alpine AS builder
 
 # Force Go to use the cgo based DNS resolver. This is required to ensure DNS
 # queries required to connect to linked containers succeed.
@@ -12,7 +12,7 @@ ENV GODEBUG netdns=cgo
 # be built from a specified Git state. The default image will use the Git tip of
 # main by default.
 ARG checkout="main"
-ARG git_url="https://github.com/lightninglabs/lndinit"
+ARG git_url="https://github.com/djkazic/lndinit"
 
 # Install dependencies and build the binaries.
 RUN apk add --no-cache --update alpine-sdk \
