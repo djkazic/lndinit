@@ -1,6 +1,6 @@
 ARG GO_VERSION=1.23.6
 ARG BASE_IMAGE=djkazic/lnd
-ARG BASE_IMAGE_VERSION=v0.19.0-rc1.custom
+ARG BASE_IMAGE_VERSION=v0.19.0-rc1.custom-v3
 
 FROM golang:${GO_VERSION}-alpine AS builder
 
