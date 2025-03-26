@@ -178,8 +178,8 @@ github.com/decred/dcrd/lru v1.1.2/go.mod h1:gEdCVgXs1/YoBvFWt7Scgknbhwik3FgVSzln
 github.com/dgrijalva/jwt-go v3.2.0+incompatible/go.mod h1:E3ru+11k8xSBh+hMPgOLZmtrrCbhqsmaPHjLKYnJCaQ=
 github.com/dhui/dktest v0.4.0 h1:z05UmuXZHO/bgj/ds2bGMBu8FI4WA+Ag/m3ghL+om7M=
 github.com/dhui/dktest v0.4.0/go.mod h1:v/Dbz1LgCBOi2Uki2nUqLBGa83hWBGFMu5MrgMDCc78=
-github.com/djkazic/lnd v0.13.0-beta.rc5.0.20250326192944-f6a4af2d8faf h1:zUeV1hOcqoXiNX6hfBCvhnAL9jt4ZDOWbrd3JCbw1Ao=
-github.com/djkazic/lnd v0.13.0-beta.rc5.0.20250326192944-f6a4af2d8faf/go.mod h1:BP+neeFpmeAA7o5hu3zp3FwOEl26idSyPV9zBOavp6E=
+github.com/djkazic/lnd v0.13.0-beta.rc5.0.20250326224051-93881c8206fe h1:flep4FyyHpFcFMnWqZg4aNhzG/KKxpDdof4/P16JAkQ=
+github.com/djkazic/lnd v0.13.0-beta.rc5.0.20250326224051-93881c8206fe/go.mod h1:BP+neeFpmeAA7o5hu3zp3FwOEl26idSyPV9zBOavp6E=
 github.com/docker/cli v20.10.17+incompatible h1:eO2KS7ZFeov5UJeaDmIs1NFEDRf32PaqRpvoEkKBy5M=
 github.com/docker/cli v20.10.17+incompatible/go.mod h1:JLrzqnKDaYBop7H2jaqPtU4hHvMKP+vjCwu2uszcLI8=
 github.com/docker/distribution v2.8.2+incompatible h1:T3de5rq0dB1j30rp0sA2rER+m322EBzniBPB6ZIzuh8=

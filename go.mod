@@ -203,4 +203,4 @@ replace google.golang.org/protobuf => github.com/lightninglabs/protobuf-go-hex-d
 
 go 1.23.6
 
-replace github.com/lightningnetwork/lnd => github.com/djkazic/lnd v0.13.0-beta.rc5.0.20250326192944-f6a4af2d8faf
+replace github.com/lightningnetwork/lnd => github.com/djkazic/lnd v0.13.0-beta.rc5.0.20250326224051-93881c8206fe
