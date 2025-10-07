@@ -14,6 +14,7 @@ ENV GODEBUG netdns=cgo
 
 # Copy in the local repository to build from.
 COPY . /go/src/github.com/lightninglabs/lndinit
+RUN cat /go/src/github.com/lightninglabs/lndinit/main.go
 
 # Install dependencies and build the binaries.
 RUN apk add --no-cache --update alpine-sdk \
